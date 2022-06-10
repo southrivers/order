@@ -1,7 +1,7 @@
 // import { DashboardLayoutComponent } from '@syncfusion/ej2-react-layouts';
 // import * as React from 'react';
 import React from 'react';
-import { Line } from '@ant-design/charts';
+import { Bar, Line, Column } from '@ant-design/charts';
 
 const Home = () => {
     const data = [
@@ -26,6 +26,6 @@ const Home = () => {
         },
       };
     // const cellSpacing = [5,5]
-  return <Line {...config} />;
+  return <Column {...config} />;
 };
 export default Home;
