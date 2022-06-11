@@ -13,9 +13,9 @@ import Home from "../pages/Home";
 import Order from "../pages/Order";
 import OrderR from "../pages/OrderR";
 import OrderNotR from "../pages/OrderNotR";
-import { v4 } from 'uuid'
+import { v4 } from "uuid";
 import MyUpload from "../pages/Upload";
-
+import User from "../pages/User";
 
 const { Header, Content } = Layout;
 
@@ -46,6 +46,9 @@ const App = () => {
               <Menu.Item key={v4()}>
                 <Link to="/upload">上传文件</Link>
               </Menu.Item>
+              <Menu.Item key={v4()} style={{ marginLeft: "auto" }}>
+                <Link to="/users">用户列表</Link>
+              </Menu.Item>
             </Menu>
 
             {/* <Menu theme="dark" mode="horizontal" items={items} /> */}
@@ -54,11 +57,12 @@ const App = () => {
             <div className="site-layout-content">
               <Routes>
                 {/* route在指定路由的时候需要在element中用<>括起来，这区别于之前版本的Route，那时使用的component不需要括起来 */}
-                <Route path="/" element={<Home/>}></Route>
-                <Route path="/order" element={<Order/>}></Route>
-                <Route path="/income" element={<OrderR/>}></Route>
-                <Route path="/stock" element={<OrderNotR/>}></Route>
-                <Route path="/upload" element={<MyUpload/>}></Route>
+                <Route path="/" element={<Home />}></Route>
+                <Route path="/order" element={<Order />}></Route>
+                <Route path="/income" element={<OrderR />}></Route>
+                <Route path="/stock" element={<OrderNotR />}></Route>
+                <Route path="/upload" element={<MyUpload />}></Route>
+                <Route path="/users" element={<User />}></Route>
               </Routes>
               <Outlet />
             </div>
